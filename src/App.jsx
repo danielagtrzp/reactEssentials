@@ -1,3 +1,4 @@
+//this way is the correct way to import images
 import reactImage from "./assets/react-core-concepts.png";
 
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
@@ -9,6 +10,9 @@ function genRandomInt(max) {
 
 function Header() {
   const description = reactDescriptions[genRandomInt(2)];
+  //you can also do it like this, but when build this image will be ignored
+  // <img src="/src/assets/react-core-concepts.png" alt="Stylized atom" />
+  //so this is setting an atribute dynamically
   return (
     <header>
       <img src={reactImage} alt="Stylized atom" />
